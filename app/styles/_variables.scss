@@ -1,0 +1,52 @@
+/* = Variables
+================================================*/
+/* path */
+$images: '../images/';
+$images-icons: '../images/ico/';
+
+/* font */
+$defaultfont: 'Lato', sans-serif;;
+
+/* colors */
+$black: #171518;
+$graydark: #191e24;
+$textdark: #25282b;
+$greenbright: #abef12;
+
+/* = Media
+================================================*/
+$mobile: 767px;
+$tablet: 1024px;
+
+@mixin respond-to($media) {
+	@if $media == mobile {
+		@media only screen and (max-width: $mobile) { @content; }
+	}
+	@if $media == mobile-portrait {
+		@media only screen and (max-width: $mobile) and (orientation: portrait) { @content; }
+	}
+	@if $media == mobile-landscape {
+		@media only screen and (max-width: $mobile) and (orientation: landscape) { @content; }
+	}
+	@else if $media == tablet {
+		@media only screen and (min-width: $mobile) and (max-width: $tablet) { @content; }
+	}
+	@else if $media == tablet-portrait {
+		@media only screen and (min-width: $mobile) and (max-width: $tablet) and (orientation: portrait) { @content; }
+	}
+	@else if $media == tablet-landscape {
+		@media only screen and (min-width: $mobile) and (max-width: $tablet) and (orientation: landscape) { @content; }
+	}
+	@else if $media == desktop {
+		@media only screen and (min-width: $tablet) { @content; }
+	}
+}
+
+/* = Extends
+================================================*/
+.reset-list {
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

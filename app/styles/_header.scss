@@ -1,0 +1,136 @@
+/* = Header
+================================================*/
+.header {
+	position: relative;
+	z-index: 10;
+
+	/* header: top bar */
+	.top-bar {
+		height: 88px;
+		width: 100%;
+		display: table;
+		background-color: $graydark;
+		box-shadow: 0 2px 4px rgba(0,0,0,.7);
+
+		@include respond-to(mobile) {
+			height: 44px;
+		}
+
+		&-item {
+			display: table-cell;
+			vertical-align: middle;
+			border-left: 1px solid #111519;
+			border-right: 1px solid #232b34;
+		}
+	}
+
+	/* header: top nav */
+	.top-nav {
+		width: 83px;
+		border-left: 0;
+
+		@include respond-to(mobile) {
+			width: 42px;
+		}
+
+		&-icon {
+			display: block;
+			margin: 0 auto;
+			height: 32px;
+			width: 25px;
+			background: url($images-icons + 'nav-ico.png') no-repeat 50% 50%;
+
+			@include respond-to(mobile) {
+				height: 44px;
+				width: 42px;
+				background-size: 16px 13px;
+			}
+		}
+	}
+
+	/* header: logo */
+	.logo {
+		padding: 0 25px;
+
+		@include respond-to(mobile) {
+			padding: 0 11px;
+		}
+
+		&-link {
+			display: inline-block;
+		}
+		&-img {
+			display: block;
+
+			@include respond-to(mobile) {
+				height: 26px;
+			}
+		}
+	}
+
+	/* header: search */
+	.search {
+		width: 84px;
+		cursor: pointer;
+
+		@include respond-to(mobile) {
+			width: 42px;
+		}
+
+		&-icon {
+			display: block;
+			margin: 0 auto;
+			height: 33px;
+			width: 31px;
+			background: url($images-icons + 'search-ico.png') no-repeat 50% 50%;
+
+			@include respond-to(mobile) {
+				height: 100%;
+				width: 100%;
+				background-size: 15px 16px;
+			}
+		}
+	}
+
+	/* header: login */
+	.login {
+		width: 316px;
+		border-right: 0;
+
+		@include respond-to(mobile) {
+			width: 42px;
+		}
+
+		&-link {
+			font-size: 24px;
+			color: $greenbright;
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+			padding-left: 82px;
+
+			@include respond-to(mobile) {
+				font-size: 0;
+				padding-left: 0;
+				display: block;
+			}
+
+			&:before {
+				content:'';
+				height: 34px;
+				width: 30px;
+				position: absolute;
+				top: 50%;
+				left: 27px;
+				transform: translateY(-50%);
+				background: url($images-icons + 'login-ico.png') no-repeat 50% 50%;
+
+				@include respond-to(mobile) {
+					background-size: 15px 17px;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+}

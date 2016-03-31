@@ -1,0 +1,128 @@
+/* = Footer
+================================================*/
+.footer {
+	background: #0d0f12;
+	border-top: 1px solid #1c2229;
+	padding: 0 25px 20px;
+
+	@include respond-to(mobile) {
+		padding: 0 12px 12px;
+	}
+}
+
+/* footer nav */
+.footer-nav {
+	border-bottom: 1px solid #1c2229;
+
+	@include respond-to(mobile-portrait) {
+		border-bottom: none;
+	}
+
+	&-list {
+		@extend .reset-list;
+		display: table;
+		width: 100%;
+
+		@include respond-to(mobile-portrait) {
+			display: block;
+		}
+	}
+	&-item {
+		display: table-cell;
+		vertical-align: middle;
+		width: 20%;
+		white-space: nowrap;
+
+		@include respond-to(mobile-portrait) {
+			width: 100%;
+			display: block;
+			text-align: center;
+			border-bottom: 1px solid #1c2229;
+		}
+
+		&:last-child {
+			.footer-nav-link:before {
+				display: none;
+			}
+		}
+	}
+	&-link {
+		font-size: 20px;
+		line-height: 70px;
+		color: #484c51;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		position: relative;
+		padding: 0 25px;
+
+		@include respond-to(tablet-portrait) {
+			padding: 0 15px;
+		}
+		@include respond-to(mobile) {
+			font-size: 10px;
+			line-height: 34px;
+			padding: 0 10px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			height: 14px;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			border-right: 1px solid #1c2229;
+
+			@include respond-to(mobile-portrait) {
+				display: none;
+			}
+		}
+	}
+}
+
+/* footer copy */
+.footer-copy {
+	color: #25282b;
+	font-size: 16px;
+	line-height: normal;
+	text-align: center;
+	padding: 28px 0;
+
+	@include respond-to(mobile) {
+		font-size: 8px;
+		line-height: normal;
+		padding: 15px 0;
+	}
+
+}
+
+/* footer icons */
+.footer-icons {
+	text-align: center;
+
+	&-list {
+		@extend .reset-list;
+	}
+	&-item {
+		display: inline-block;
+		margin: 0 5px 5px;
+
+		@include respond-to(mobile) {
+			margin: 0 2px 5px;
+		}
+	}
+	&-link {
+		display: block;
+	}
+	&-img {
+		display: block;
+
+		@include respond-to(tablet-portrait) {
+			height: 50px;
+		}
+		@include respond-to(mobile) {
+			height: 35px;
+		}
+	}
+}

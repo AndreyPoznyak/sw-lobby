@@ -1,0 +1,27 @@
+/* = Slider
+================================================*/
+.slider {
+	overflow: hidden;
+
+	@include respond-to(mobile-landscape) {
+		display: none;
+	}
+
+	&-list{
+		@extend .reset-list;
+		position: relative;
+		white-space: nowrap;
+		max-width: 100%;
+
+		&-item {
+			display: inline-block;
+			position: relative;
+			width: 100%;
+		}
+		&-img {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}

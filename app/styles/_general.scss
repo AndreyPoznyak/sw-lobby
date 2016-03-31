@@ -1,0 +1,45 @@
+/* = Basic styles
+================================================*/
+* {
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	text-size-adjust: none;
+	outline: none;
+}
+body {
+	background: $black;
+	font-family: $defaultfont;
+}
+body, html {
+	height: 100%;
+}
+
+/* = Modes
+================================================*/
+.is-desktop {
+	@include respond-to(mobile) {
+		display: none !important;
+	}
+	@include respond-to(tablet) {
+		display: none !important;
+	}
+}
+.is-tablet {
+	@include respond-to(mobile) {
+		display: none !important;
+	}
+}
+.is-mobile {
+	@include respond-to(tablet) {
+		display: none !important;
+	}
+	@include respond-to(desktop) {
+		display: none !important;
+	}
+}
+
+/* = Modifiers
+================================================*/
+.hidden {
+	display: none!important;
+}
