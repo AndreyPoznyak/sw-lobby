@@ -16,7 +16,7 @@ $(document).ready(function () {
 	// slider initialization
 	if ($('.slider-list').length) {
 		$(window).on('load', function () {
-			slider.init({speed: 4000}); // speed
+			slider.init({speed: 5000}); // speed
 		});
 	}
 });

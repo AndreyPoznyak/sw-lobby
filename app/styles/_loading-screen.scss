@@ -37,7 +37,10 @@
 	50% {
 		transform: scale3d(.3, .3, .3);
 	}
-	90% {
+	60% {
+		opacity: 0;
+	}
+	100% {
 		opacity: 0;
 	}
 }
