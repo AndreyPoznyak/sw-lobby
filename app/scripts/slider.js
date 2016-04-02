@@ -18,11 +18,6 @@ var slider = (function(){
 
 			// stop on hover
 			slider.stop();
-
-			// resize slider
-			$(window).on('resize', function () {
-				slider.resize();
-			});
 		},
 
 		move = function () {
@@ -37,12 +32,6 @@ var slider = (function(){
 				$sliderList.css({'left': leftValue});
 			});
 			return false;
-		},
-
-		resize = function () {
-			clearInterval(run);
-			run = null;
-			$sliderList.removeAttr('style');
 		},
 
 		stop = function () {
@@ -66,7 +55,6 @@ var slider = (function(){
 	return {
 		init: init,
 		move: move,
-		resize: resize,
 		stop: stop
 	};
 })();
