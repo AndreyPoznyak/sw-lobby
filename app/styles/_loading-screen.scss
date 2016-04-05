@@ -64,8 +64,7 @@
 	background-size: 29618px 320px;
 	height: 320px;
 	width: 502px;
-	animation: loading-screen-animation 2.5s steps(60, end) .2s backwards,
-			   loading-screen-animation-end 0s 2.7s forwards;
+	animation: loading-screen-animation 2.5s steps(59, end) .2s forwards;
 
 	@include respond-to(mobile){
 		background: url('../images/skywind-mob-spr.jpg') no-repeat 280px 0;
@@ -73,30 +72,20 @@
 		background-size: 16520px 178px;
 		height: 178px;
 		width: 280px;
-		animation: loading-screen-animation-mob 2.5s steps(60, end) .2s backwards,
-					loading-screen-animation-end-mob 0s 2.7s forwards;
+		animation: loading-screen-animation-mob 2.5s steps(59, end) .2s forwards;
 	}
 }
 @keyframes loading-screen-animation {
-	to {
-		background-position: -29618px 0;
-	}
-}
-@keyframes loading-screen-animation-end {
 	to {
 		background-position: -29116px 0;
 	}
 }
 @keyframes loading-screen-animation-mob {
 	to {
-		background-position: -16520px 0;
-	}
-}
-@keyframes loading-screen-animation-end-mob {
-	to {
 		background-position: -16240px 0;
 	}
 }
+
 
 /* = Progress bar
 ================================================*/
