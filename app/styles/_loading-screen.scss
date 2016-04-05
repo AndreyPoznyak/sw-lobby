@@ -4,9 +4,6 @@
 	.loading-overlay {
 		display: block;
 	}
-	.loading-screen {
-		background-image: url('../images/skywind-mob-spr.jpg');
-	}
 }
 .init-screen {
 	overflow: hidden;
@@ -71,6 +68,7 @@
 			   loading-screen-animation-end 0s 2.7s forwards;
 
 	@include respond-to(mobile){
+		background: url('../images/skywind-mob-spr.jpg') no-repeat 280px 0;
 		background-position: 280px 0;
 		background-size: 16520px 178px;
 		height: 178px;
