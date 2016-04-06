@@ -139,7 +139,7 @@
 	width: 200px;
 	height: 200px;
 	background: url('../images/logo-spr.png') no-repeat 0 0;
-	animation: logo-animation-w 2.5s steps(9) infinite, logo-animation-h 2.5s steps(8) infinite;
+	animation: logo-animation-w 1.5s steps(9) infinite, logo-animation-h 1.5s steps(8) infinite;
 }
 @keyframes logo-animation-w {
 	0% { background-position-y:   0px; }
