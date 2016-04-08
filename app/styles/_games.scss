@@ -14,6 +14,10 @@
 		padding-top: 7px;
 		@extend .reset-list;
 		white-space: nowrap;
+
+		@include respond-to(mobile) {
+			padding-top: 4px;
+		}
 	}
 	&-item {
 		display: inline-block;
