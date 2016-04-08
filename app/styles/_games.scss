@@ -11,12 +11,36 @@
 }
 .games {
 	&-list {
+		padding-top: 7px;
 		@extend .reset-list;
 		white-space: nowrap;
 	}
 	&-item {
 		display: inline-block;
 		margin-right: 14px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0,0,0,0.4);
+		}
+
+		&.m-available {
+			cursor: pointer;
+			&:before {
+				background: transparent;
+			}
+		}
+		&.m-soon {
+			&:before {
+				background: rgba(0,0,0,0.2);
+			}
+		}
 
 		@include respond-to(mobile) {
 			margin-right: 7px;
@@ -35,7 +59,23 @@
 			height: 88px;
 		}
 		@include respond-to(mobile-landscape) {
-			height: 120px;
+			height: 122px;
+		}
+	}
+	&-label {
+		position: absolute;
+		top: -7px;
+		left: -12px;
+
+		@include respond-to(mobile) {
+			top: -4px;
+			left: -6px;
+			height: 51px;
+		}
+		@include respond-to(mobile-landscape) {
+			top: -4px;
+			left: -7px;
+			height: 60px;
 		}
 	}
 }

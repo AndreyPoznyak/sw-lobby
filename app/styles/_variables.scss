@@ -38,7 +38,7 @@ $tablet: 1024px;
 		@media only screen and (min-width: $mobile) and (max-width: $tablet) and (orientation: landscape) { @content; }
 	}
 	@else if $media == desktop {
-		@media only screen and (min-width: $tablet) { @content; }
+		@media only screen and (min-width: $tablet + 1) { @content; }
 	}
 }
 
