@@ -36,8 +36,9 @@
 
 		&.m-available {
 			cursor: pointer;
+
 			&:before {
-				background: transparent;
+				display: none;
 			}
 		}
 		&.m-soon {
