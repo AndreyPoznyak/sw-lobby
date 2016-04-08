@@ -4,6 +4,10 @@
 	-webkit-overflow-scrolling: touch;
 	overflow-x: auto;
 	overflow-y: hidden;
+
+	@include respond-to(desktop) {
+		overflow: hidden;
+	}
 }
 .games {
 	&-list {
