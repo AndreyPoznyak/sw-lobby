@@ -23,6 +23,7 @@
 		display: inline-block;
 		margin-right: 14px;
 		position: relative;
+		line-height: 0;
 
 		&:before {
 			content: '';
@@ -31,7 +32,7 @@
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background: rgba(0,0,0,0.4);
+			background: rgba(0,0,0,0.7);
 		}
 
 		&.m-available {
@@ -74,13 +75,13 @@
 
 		@include respond-to(mobile) {
 			top: -4px;
-			left: -6px;
-			height: 51px;
-		}
-		@include respond-to(mobile-landscape) {
-			top: -4px;
 			left: -7px;
 			height: 60px;
+		}
+		@include respond-to(mobile-landscape) {
+			top: -5px;
+			left: -9px;
+			height: 80px;
 		}
 	}
 }
